@@ -25,7 +25,7 @@ Certifique-se de ter o **Go** instalado na sua máquina. Você pode baixá-lo e 
 ### Chave de API
 Este projeto utiliza a API de previsão do tempo do WeatherAPI.com. Você precisará de uma chave de API para que o aplicativo funcione.
 
-**Importante**: No código fornecido, a chave de API está **hardcoded** como `123456789`. **É crítico que você substitua esta chave pela sua chave de API real** obtida em [weatherapi.com](https://www.weatherapi.com/).
+**Importante**: No código fornecido, a chave de API está **hardcoded** como `SUA_CHAVE_AQUI`. **É crítico que você substitua esta chave pela sua chave de API real** obtida em [weatherapi.com](https://www.weatherapi.com/).
 
 ```go
 res, err := http.Get(
