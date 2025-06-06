@@ -6,6 +6,7 @@ import (
 	"github.com/fatih/color"
 	"io"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -35,7 +36,13 @@ type Weather struct {
 }
 
 func main() {
-	res, err := http.Get("https://api.weatherapi.com/v1/forecast.json?q=-20.538477139654926%2C%20-47.40334825706073&days=1&key=8041e41ace5141f6be831419250606&lang=pt")
+	q := "Franca"
+
+	if len(os.Args) >= 2 {
+		q = os.Args[1]
+	}
+
+	res, err := http.Get("https://api.weatherapi.com/v1/forecast.json?q=" + q + "&days=1&key=8041e41ace5141f6be831419250606&lang=pt")
 	if err != nil {
 		// Se houver algum erro, ele encerra a aplicação a printa o erro.
 		panic(err)
